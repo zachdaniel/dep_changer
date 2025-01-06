@@ -17,6 +17,7 @@ defmodule DepChanger do
       # with an optional dependency on it?
       # I can't restart the VM, we have in memory state of file changes
       # and igniter is invoked via a mix task
+      apply(Jason, :encode, ["Hello!"])
     after
       # cleanup
       File.write!("mix.exs", original)
